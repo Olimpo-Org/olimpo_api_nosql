@@ -1,7 +1,7 @@
 package com.example.olimpo_api_nosql.service.feedFlow;
 
 import com.aventrix.jnanoid.jnanoid.NanoIdUtils;
-import com.example.olimpo_api_nosql.model.Publication;
+import com.example.olimpo_api_nosql.model.mongo.Publication;
 import com.example.olimpo_api_nosql.repository.feedFlow.PublicationRepository;
 import org.springframework.stereotype.Service;
 

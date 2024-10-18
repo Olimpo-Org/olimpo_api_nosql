@@ -1,7 +1,7 @@
 package com.example.olimpo_api_nosql.service.feedFlow;
 
 import com.example.olimpo_api_nosql.exception.ExceptionThrower;
-import com.example.olimpo_api_nosql.model.Comment;
+import com.example.olimpo_api_nosql.model.mongo.Comment;
 import com.example.olimpo_api_nosql.repository.feedFlow.CommentRepository;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,7 @@
 package com.example.olimpo_api_nosql.controller.negotiationFlow;
 
 import com.example.olimpo_api_nosql.exception.ExceptionThrower;
-import com.example.olimpo_api_nosql.model.Announcement;
+import com.example.olimpo_api_nosql.model.mongo.Announcement;
 import com.example.olimpo_api_nosql.service.negotiationFlow.AnnouncementService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;

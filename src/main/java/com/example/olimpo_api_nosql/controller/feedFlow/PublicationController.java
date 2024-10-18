@@ -1,7 +1,7 @@
 package com.example.olimpo_api_nosql.controller.feedFlow;
 
 import com.example.olimpo_api_nosql.exception.ExceptionThrower;
-import com.example.olimpo_api_nosql.model.Publication;
+import com.example.olimpo_api_nosql.model.mongo.Publication;
 import com.example.olimpo_api_nosql.service.feedFlow.PublicationService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
