@@ -1,6 +1,6 @@
 package com.example.olimpo_api_nosql.repository.negotiationFlow;
 
-import com.example.olimpo_api_nosql.model.Announcement;
+import com.example.olimpo_api_nosql.model.mongo.Announcement;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;

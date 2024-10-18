@@ -1,7 +1,7 @@
 package com.example.olimpo_api_nosql.service.messageFlow;
 
 import com.example.olimpo_api_nosql.exception.ExceptionThrower;
-import com.example.olimpo_api_nosql.model.Message;
+import com.example.olimpo_api_nosql.model.mongo.Message;
 import com.example.olimpo_api_nosql.repository.messageFlow.ChatRepository;
 import com.example.olimpo_api_nosql.repository.messageFlow.MessageRepository;
 import org.springframework.stereotype.Service;

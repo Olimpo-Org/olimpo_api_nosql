@@ -2,7 +2,7 @@ package com.example.olimpo_api_nosql.repository.feedFlow;
 
 import com.aventrix.jnanoid.jnanoid.NanoIdUtils;
 import com.example.olimpo_api_nosql.exception.ExceptionThrower;
-import com.example.olimpo_api_nosql.model.Publication;
+import com.example.olimpo_api_nosql.model.mongo.Publication;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
