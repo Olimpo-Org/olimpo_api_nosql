@@ -1,7 +1,7 @@
 package com.example.olimpo_api_nosql.controller.messageFlow;
 
 import com.example.olimpo_api_nosql.exception.ExceptionThrower;
-import com.example.olimpo_api_nosql.model.Message;
+import com.example.olimpo_api_nosql.model.mongo.Message;
 import com.example.olimpo_api_nosql.service.messageFlow.MessageService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;

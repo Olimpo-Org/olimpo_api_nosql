@@ -1,4 +1,4 @@
-package com.example.olimpo_api_nosql.model;
+package com.example.olimpo_api_nosql.model.mongo;
 
 import jakarta.validation.constraints.NotNull;
 import org.bson.types.ObjectId;

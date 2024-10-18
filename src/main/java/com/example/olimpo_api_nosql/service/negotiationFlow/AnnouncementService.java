@@ -1,7 +1,7 @@
 package com.example.olimpo_api_nosql.service.negotiationFlow;
 
 import com.aventrix.jnanoid.jnanoid.NanoIdUtils;
-import com.example.olimpo_api_nosql.model.Announcement;
+import com.example.olimpo_api_nosql.model.mongo.Announcement;
 import com.example.olimpo_api_nosql.repository.negotiationFlow.AnnouncementRepository;
 import org.springframework.stereotype.Service;
 

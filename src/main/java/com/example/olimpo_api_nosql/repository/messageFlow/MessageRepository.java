@@ -1,7 +1,7 @@
 package com.example.olimpo_api_nosql.repository.messageFlow;
 
 import com.aventrix.jnanoid.jnanoid.NanoIdUtils;
-import com.example.olimpo_api_nosql.model.Message;
+import com.example.olimpo_api_nosql.model.mongo.Message;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;

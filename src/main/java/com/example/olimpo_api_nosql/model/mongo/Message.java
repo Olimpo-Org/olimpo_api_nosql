@@ -1,4 +1,4 @@
-package com.example.olimpo_api_nosql.model;
+package com.example.olimpo_api_nosql.model.mongo;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
