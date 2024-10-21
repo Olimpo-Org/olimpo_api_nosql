@@ -1,6 +1,6 @@
 FROM maven:3.8.5-openjdk-17 AS build
 COPY . .
-RUN mvn clean package -DskipTests -e
+RUN mvn clean package -DskipTests -X
 
 FROM openjdk:17-jdk-slim
 COPY --from=build target/olimpo_api_nosql-0.0.1-SNAPSHOT.jar app.jar
