@@ -40,12 +40,15 @@ public class Publication {
     @Field("likes")
     private List<String> likes;
 
-    @NotNull(message = "Tag cannot be null")
-    @Field("tag")
-    private String tag;
-
-    public Publication(String publicationId, String communityId, String senderId, String senderName, List<String> images,
-                       String description, List<String> likes, String tag) {
+    public Publication(
+            String publicationId,
+            String communityId,
+            String senderId,
+            String senderName,
+            List<String> images,
+            String description,
+            List<String> likes
+    ) {
         this.publicationId = publicationId;
         this.communityId = communityId;
         this.senderId = senderId;
@@ -53,7 +56,6 @@ public class Publication {
         this.images = images;
         this.description = description;
         this.likes = likes;
-        this.tag = tag;
     }
 
     public Publication() {
@@ -121,12 +123,5 @@ public class Publication {
 
     public void setLikes(List<String> likes) {
         this.likes = likes;
-    }
-
-    public String getTag() {
-        return tag;
-    }
-    public void setTag(String tag) {
-        this.tag = tag;
     }
 }
