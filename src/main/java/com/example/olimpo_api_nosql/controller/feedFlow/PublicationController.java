@@ -47,11 +47,11 @@ public class PublicationController {
             @ApiResponse(responseCode = "404", description = "Publicações não encontradas")
     })
     @GetMapping("/get/{communityId}")
-    public ResponseEntity<List<Publication>> getAllOfCommunity(
+    public ResponseEntity<List<Object>> getAllOfCommunity(
             @Parameter(description = "Id da comunidade")
             @PathVariable("communityId") String communityId
     ) {
-        List<Publication> publications = publicationService.getAllOfCommunity(communityId);
+        List<Object> publications = publicationService.getAllOfCommunity(communityId);
         return ResponseEntity.ok().body(publications);
     }
 
