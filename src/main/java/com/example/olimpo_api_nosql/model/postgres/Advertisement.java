@@ -38,6 +38,7 @@ public class Advertisement {
     @Column(name = "plan_id")
     private Long idPlan;
 
+
     public Advertisement() {
     }
 
