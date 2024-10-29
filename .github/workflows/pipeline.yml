@@ -1,0 +1,27 @@
+name: Deploy - Desenvolvimento
+ 
+on:
+  push:
+    branches: [ "dev" ]
+ 
+jobs:
+  build:
+ 
+    runs-on: ubuntu-latest
+ 
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: maven
+    - name: Compilando Maven
+      run: mvn -B package -DskipTests --file pom.xml
+ 
+    - name: Render Deploy Action
+      uses: johnbeynon/render-deploy-action@v0.0.8
+      with:
+        service-id: ${{ secrets.service_ID }}
+        api-key: ${{ secrets.API_key }}
