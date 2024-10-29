@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDate;
+import java.util.UUID;
 
 @Entity
 @Table(name = "advertisement")
@@ -11,7 +12,7 @@ public class Advertisement {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long id;
+    private UUID id;
 
     @NotNull(message = "Description cannot be null")
     @Column(name = "title")
@@ -32,7 +33,7 @@ public class Advertisement {
     private String imageUrl;
 
     @Column(name = "user_id")
-    private Long userId;
+    private UUID userId;
 
     @Column(name = "plan_id")
     private Long idPlan;
@@ -40,7 +41,7 @@ public class Advertisement {
     public Advertisement() {
     }
 
-    public Advertisement(Long id, String title, String description, LocalDate divulgationDate, Integer category, String imageUrl, Long userId, Long idPlan) {
+    public Advertisement(UUID id, String title, String description, LocalDate divulgationDate, Integer category, String imageUrl, UUID userId, Long idPlan) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -51,11 +52,11 @@ public class Advertisement {
         this.idPlan = idPlan;
     }
 
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
@@ -99,11 +100,11 @@ public class Advertisement {
         this.imageUrl = imageUrl;
     }
 
-    public Long getUserId() {
+    public UUID getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(UUID userId) {
         this.userId = userId;
     }
 
