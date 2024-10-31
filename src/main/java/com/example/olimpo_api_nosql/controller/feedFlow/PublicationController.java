@@ -20,6 +20,12 @@ import java.util.List;
 @Tag(name = "Publication", description = "Endpoints de publicação")
 public class PublicationController {
     private final PublicationService publicationService;
+
+    @GetMapping("/manterApi")
+    public ResponseEntity manterApi() {
+        return ResponseEntity.ok().build();
+    }
+    
     @Autowired
     public PublicationController(PublicationService publicationService) {
         this.publicationService = publicationService;
