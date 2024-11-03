@@ -12,7 +12,7 @@ public class Advertisement {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private UUID id;
+    private Integer id;
 
     @NotNull(message = "Description cannot be null")
     @Column(name = "title")
@@ -42,7 +42,7 @@ public class Advertisement {
     public Advertisement() {
     }
 
-    public Advertisement(UUID id, String title, String description, LocalDate divulgationDate, Integer category, String imageUrl, UUID userId, Long idPlan) {
+    public Advertisement(Integer id, String title, String description, LocalDate divulgationDate, Integer category, String imageUrl, UUID userId, Long idPlan) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -53,11 +53,11 @@ public class Advertisement {
         this.idPlan = idPlan;
     }
 
-    public UUID getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
