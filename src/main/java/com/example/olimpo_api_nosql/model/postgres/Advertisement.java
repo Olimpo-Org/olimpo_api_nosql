@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDate;
-import java.util.UUID;
 
 @Entity
 @Table(name = "advertisement")
@@ -33,7 +32,7 @@ public class Advertisement {
     private String imageUrl;
 
     @Column(name = "user_id")
-    private UUID userId;
+    private Integer userId;
 
     @Column(name = "plan_id")
     private Long idPlan;
@@ -42,7 +41,7 @@ public class Advertisement {
     public Advertisement() {
     }
 
-    public Advertisement(Integer id, String title, String description, LocalDate divulgationDate, Integer category, String imageUrl, UUID userId, Long idPlan) {
+    public Advertisement(Integer id, String title, String description, LocalDate divulgationDate, Integer category, String imageUrl, Integer userId, Long idPlan) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -101,11 +100,11 @@ public class Advertisement {
         this.imageUrl = imageUrl;
     }
 
-    public UUID getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(UUID userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
