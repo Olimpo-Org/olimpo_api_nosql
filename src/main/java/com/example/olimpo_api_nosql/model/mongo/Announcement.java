@@ -30,6 +30,9 @@ public class Announcement {
     @Field("sender_name")
     private String senderName;
 
+    @Field("sender_image")
+    private String senderImage;
+
     @Field("images")
     @NotNull(message = "Images cannot be null")
     @Size(min = 1, max = 5, message = "Images must have between 1 and 5 elements")
@@ -49,12 +52,13 @@ public class Announcement {
     public Announcement() {
     }
 
-    public Announcement(ObjectId id, String communityId, String senderId, String senderName,
-                        List<String> images, String description, String type, Date sentAt) {
+    public Announcement(ObjectId id, String announcementId, String communityId, String senderId, String senderName, String senderImage, List<String> images, String description, String type, Date sentAt) {
         this.id = id;
+        this.announcementId = announcementId;
         this.communityId = communityId;
         this.senderId = senderId;
         this.senderName = senderName;
+        this.senderImage = senderImage;
         this.images = images;
         this.description = description;
         this.type = type;
