@@ -29,6 +29,9 @@ public class Publication {
     @Field("sender_name")
     private String senderName;
 
+    @Field("sender_image")
+    private String senderImage;
+
     @Field("images")
     private List<String> images;
 
@@ -40,19 +43,13 @@ public class Publication {
     @Field("likes")
     private List<String> likes;
 
-    public Publication(
-            String publicationId,
-            String communityId,
-            String senderId,
-            String senderName,
-            List<String> images,
-            String description,
-            List<String> likes
-    ) {
+    public Publication(String id, String publicationId, String communityId, String senderId, String senderName, String senderImage, List<String> images, String description, List<String> likes) {
+        this.id = id;
         this.publicationId = publicationId;
         this.communityId = communityId;
         this.senderId = senderId;
         this.senderName = senderName;
+        this.senderImage = senderImage;
         this.images = images;
         this.description = description;
         this.likes = likes;

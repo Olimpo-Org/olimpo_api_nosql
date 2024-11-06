@@ -24,34 +24,34 @@ public class AnnouncementRepository {
 
     public List<Announcement> getAllOfCommunity(String communityId) {
         Query query = new Query();
-        query.addCriteria(Criteria.where("communityId").is(communityId));
+        query.addCriteria(Criteria.where("community_id").is(communityId));
         return mongoTemplate.find(query, Announcement.class);
     }
 
     public List<Announcement> getAllOfUser(String communityId, String userId) {
         Query query = new Query();
-        query.addCriteria(Criteria.where("communityId").is(communityId));
-        query.addCriteria(Criteria.where("userId").is(userId));
+        query.addCriteria(Criteria.where("community_id").is(communityId));
+        query.addCriteria(Criteria.where("sender_id").is(userId));
         return mongoTemplate.find(query, Announcement.class);
     }
 
     public List<Announcement> getAllServicesOfCommunity(String communityId) {
         Query query = new Query();
-        query.addCriteria(Criteria.where("communityId").is(communityId));
+        query.addCriteria(Criteria.where("announcement_id").is(communityId));
         query.addCriteria(Criteria.where("type").is("service"));
         return mongoTemplate.find(query, Announcement.class);
     }
 
     public List<Announcement> getAllSalesOfCommunity(String communityId) {
         Query query = new Query();
-        query.addCriteria(Criteria.where("communityId").is(communityId));
+        query.addCriteria(Criteria.where("community_id").is(communityId));
         query.addCriteria(Criteria.where("type").is("sale"));
         return mongoTemplate.find(query, Announcement.class);
     }
 
     public List<Announcement> getAllDonationsOfCommunity(String communityId) {
         Query query = new Query();
-        query.addCriteria(Criteria.where("communityId").is(communityId));
+        query.addCriteria(Criteria.where("community_id").is(communityId));
         query.addCriteria(Criteria.where("type").is("donation"));
         return mongoTemplate.find(query, Announcement.class);
     }
