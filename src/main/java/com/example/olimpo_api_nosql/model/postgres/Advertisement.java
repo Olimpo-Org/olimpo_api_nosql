@@ -25,7 +25,7 @@ public class Advertisement {
     @Column(name = "publication_date")
     private LocalDate divulgationDate;
 
-    @Column(name = "category")
+    @Column(name = "category_id")
     private Integer category;
 
     @Column(name = "image")
