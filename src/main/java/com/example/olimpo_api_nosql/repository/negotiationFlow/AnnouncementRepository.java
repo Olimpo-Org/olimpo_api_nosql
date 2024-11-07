@@ -37,7 +37,7 @@ public class AnnouncementRepository {
 
     public List<Announcement> getAllServicesOfCommunity(String communityId) {
         Query query = new Query();
-        query.addCriteria(Criteria.where("announcement_id").is(communityId));
+        query.addCriteria(Criteria.where("community_id").is(communityId));
         query.addCriteria(Criteria.where("type").is("service"));
         return mongoTemplate.find(query, Announcement.class);
     }
